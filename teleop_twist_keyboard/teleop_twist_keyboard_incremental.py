@@ -4,7 +4,7 @@ import signal
 import rclpy
 from pynput.keyboard import Key, Listener
 
-from key_teleop.teleop import Teleop
+from teleop_twist_keyboard.teleop import Teleop
 
 
 class IncrementalKeyTeleop(Teleop):

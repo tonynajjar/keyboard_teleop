@@ -22,7 +22,7 @@ To run with custom config:
 ```
 ros2 run teleop_twist_keyboard key_teleop_incremental --ros-args --params-file <path-to-your-config-file>
 ```
-Configuration examples can be found in teleop_twist_keyboard/config/
+A configuration example can be found in teleop_twist_keyboard/config/
 
 
 # teleop_twist_keyboard_incremental Usage

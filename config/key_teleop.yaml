@@ -4,4 +4,5 @@ teleop_twist_keyboard:
     robot_base_frame: "base_link"
     linear_max: 1.0 # m/s
     angular_max: 1.0 # rad/s
-    use_sim_time: False # TODO: This breaks
+    step: 0.2 # For key_teleop_incremental only
+    use_sim_time: False

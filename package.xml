@@ -6,7 +6,7 @@
   <description>A text-based interface to send a robot movement commands.</description>
 
   <maintainer email="tony.najjar.1997@gmail.com">Tony Najjar</maintainer>
-  <license>BSD</license>
+  <license>MIT</license>
 
   <author email="tony.najjar.1997@gmail.com">Tony Najjar</author>
 

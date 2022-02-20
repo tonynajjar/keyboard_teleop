@@ -22,7 +22,7 @@ setup(
     author_email="tony.najjar.1997@gmail.com",
     maintainer="Tony Najjar",
     maintainer_email="tony.najjar.1997@gmail.com",
-    license="BSD",
+    license="MIT",
     tests_require=["pytest"],
     entry_points={
         "console_scripts": [

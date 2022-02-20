@@ -1,0 +1,7 @@
+teleop_twist_keyboard:
+  ros__parameters:
+    twist_stamped_enabled: False
+    robot_base_frame: "base_link"
+    linear_max: 1.0 # m/s
+    angular_max: 1.0 # rad/s
+    use_sim_time: False # TODO: This breaks

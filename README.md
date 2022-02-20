@@ -1,5 +1,5 @@
 # teleop_twist_keyboard
-Keyboard Teleop for ROS2 with two modes "incremental" and "hold"
+Keyboard Teleop for ROS2 with two modes "incremental" and "hold". Not to confuse with the official https://github.com/ros2/teleop_twist_keyboard. This is a personal adaptation to fit personal needs (maybe yours too).
 
 # Installation
 

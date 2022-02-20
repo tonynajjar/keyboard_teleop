@@ -55,9 +55,4 @@ Controls:
 WASD or Arrows to move
 Any other key to stop
 CTRL-C or q to quit
-
-Configuration:
-
-Max Linear Speed: +/-{self.LINEAR_MAX} m/s
-Max Angular Speed: +/-{self.ANGULAR_MAX} rad/s
 ```

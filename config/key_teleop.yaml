@@ -2,6 +2,7 @@ teleop_twist_keyboard:
   ros__parameters:
     twist_stamped_enabled: False
     robot_base_frame: "base_link"
+    publish_rate: 10.0 # Hz
     linear_max: 1.0 # m/s
     angular_max: 1.0 # rad/s
     step: 0.2 # For key_teleop_incremental only

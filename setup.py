@@ -3,7 +3,7 @@ import os
 from setuptools import setup
 from glob import glob
 
-package_name = "teleop_twist_keyboard"
+package_name = "keyboard_teleop"
 share_path = os.path.join("share", package_name)
 
 
@@ -26,8 +26,8 @@ setup(
     tests_require=["pytest"],
     entry_points={
         "console_scripts": [
-            "teleop_twist_keyboard_incremental = teleop_twist_keyboard.teleop_twist_keyboard_incremental:main",
-            "teleop_twist_keyboard_hold = teleop_twist_keyboard.teleop_twist_keyboard_hold:main",
+            "teleop_twist_keyboard_incremental = keyboard_teleop.teleop_twist_keyboard_incremental:main",
+            "teleop_twist_keyboard_hold = keyboard_teleop.teleop_twist_keyboard_hold:main",
         ],
     },
 )

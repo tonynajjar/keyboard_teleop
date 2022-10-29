@@ -9,26 +9,26 @@ from rclpy.qos import qos_profile_system_default
 class Teleop(Node, ABC):
     def __init__(self):
         atexit.register(self._emergency_stop)
-        Node.__init__(self, "teleop_twist_keyboard")
+        Node.__init__(self, "keyboard_teleop")
 
         self.declare_parameter("twist_stamped_enabled", False)
         self.declare_parameter("robot_base_frame", "base_link")
         self.declare_parameter("linear_max", 1.0)
         self.declare_parameter("angular_max", 1.0)
-
+        self.declare_parameter("publish_rate", 10.0)
         self.LINEAR_MAX = (
-            self.get_parameter("linear_max").get_parameter_value().double_value
+            self.get_parameter("linear_max").value
         )
 
         self.ANGULAR_MAX = (
-            self.get_parameter("angular_max").get_parameter_value().double_value
+            self.get_parameter("angular_max").value
         )
 
         self._robot_base_frame = (
-            self.get_parameter("robot_base_frame").get_parameter_value().string_value
+            self.get_parameter("robot_base_frame").value
         )
 
-        if self.get_parameter("twist_stamped_enabled").get_parameter_value().bool_value:
+        if self.get_parameter("twist_stamped_enabled").value:
             self.publisher_ = self.create_publisher(
                 TwistStamped, "cmd_vel", qos_profile_system_default
             )
@@ -38,8 +38,8 @@ class Teleop(Node, ABC):
                 Twist, "cmd_vel", qos_profile_system_default
             )
             self._make_twist = self._make_twist_unstamped
-
-        self.create_timer(0.1, self._publish)
+        rate = 1/self.get_parameter("publish_rate").value
+        self.create_timer(rate, self._publish)
         self.linear = 0.0
         self.angular = 0.0
 

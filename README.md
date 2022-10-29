@@ -1,31 +1,31 @@
-# teleop_twist_keyboard
-Keyboard Teleop for ROS2 with two modes "incremental" and "hold". Not to confuse with the official https://github.com/ros2/teleop_twist_keyboard. This is a personal adaptation to fit personal needs (maybe yours too).
+# keyboard_teleop
+Keyboard Teleop for ROS2 with two modes "incremental" and "hold"
 
 # Installation
 
-- Clone the repo: ```git clone https://github.com/tonynajjar/teleop_twist_keyboard/```
+- Clone the repo: ```git clone https://github.com/tonynajjar/keyboard_teleop```
 - Install dependencies: ```rosdep install --from-paths src --ignore-src -r```
 
 # Launch
 
 ```
-ros2 run teleop_twist_keyboard teleop_twist_keyboard_hold 
+ros2 run keyboard_teleop keyboard_teleop_hold 
 ```
 or
 
 ```
-ros2 run teleop_twist_keyboard teleop_twist_keyboard_incremental
+ros2 run keyboard_teleop keyboard_teleop_incremental
 ```
 
 To run with custom config: 
 
 ```
-ros2 run teleop_twist_keyboard key_teleop_incremental --ros-args --params-file <path-to-your-config-file>
+ros2 run keyboard_teleop key_teleop_incremental --ros-args --params-file <path-to-your-config-file>
 ```
-A configuration example can be found in teleop_twist_keyboard/config/
+A configuration example can be found in keyboard_teleop/config/
 
 
-# teleop_twist_keyboard_incremental Usage
+# keyboard_teleop_incremental Usage
 
 ```
 This node takes keypresses from the keyboard and publishes them 
@@ -41,7 +41,7 @@ Any other key to stop
 CTRL-C or q to quit
 ```
 
-# teleop_twist_keyboard_hold Usage
+# keyboard_teleop_hold Usage
 
 ```
 This node takes keypresses from the keyboard and publishes them 

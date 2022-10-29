@@ -28,7 +28,7 @@ class IncrementalKeyTeleop(Teleop):
             Key.left: (0, self.STEP),
             Key.right: (0, -self.STEP),
         }
-        print(
+        self.get_logger().info(
             f"""
 This node takes keypresses from the keyboard and publishes them 
 as Twist messages. This is the incremental mode; every key press 

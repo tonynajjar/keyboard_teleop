@@ -26,8 +26,8 @@ setup(
     tests_require=["pytest"],
     entry_points={
         "console_scripts": [
-            "teleop_twist_keyboard_incremental = keyboard_teleop.teleop_twist_keyboard_incremental:main",
-            "teleop_twist_keyboard_hold = keyboard_teleop.teleop_twist_keyboard_hold:main",
+            "keyboard_teleop_incremental = keyboard_teleop.keyboard_teleop_incremental:main",
+            "keyboard_teleop_hold = keyboard_teleop.keyboard_teleop_hold:main",
         ],
     },
 )

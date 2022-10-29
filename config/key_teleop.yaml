@@ -1,4 +1,4 @@
-teleop_twist_keyboard:
+keyboard_teleop:
   ros__parameters:
     twist_stamped_enabled: False
     robot_base_frame: "base_link"

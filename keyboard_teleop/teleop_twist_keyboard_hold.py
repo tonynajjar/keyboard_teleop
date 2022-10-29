@@ -27,7 +27,7 @@ class HoldKeyTeleop(Teleop):
             Key.left: (0.0, self.ANGULAR_MAX),
             Key.right: (0.0, -self.ANGULAR_MAX),
         }
-        print(
+        self.get_logger().info(
             f"""
 This node takes keypresses from the keyboard and publishes them 
 as Twist messages. This is the holding mode; your keypress will

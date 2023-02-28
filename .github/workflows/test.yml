@@ -1,0 +1,14 @@
+name: Build ROS Deb
+run-name: ${{ github.actor }} is testing out building Debs from ROS package 🚀
+on: [push]
+jobs:
+  build-ros-deb:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: jspricke/ros-deb-builder-action@main
+        with:
+          DEB_DISTRO: jammy
+          ROS_DISTRO: humble
+          REPOS_FILE: https://raw.githubusercontent.com/tonynajjar/keyboard_teleop/master/sources.repos
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SQUASH_HISTORY: true

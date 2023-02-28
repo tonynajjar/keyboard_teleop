@@ -1,0 +1,5 @@
+repositories:
+  keyboard_teleop:
+    type: git
+    url: https://github.com/tonynajjar/keyboard_teleop
+    version: f12aabd2ff959977953b6ada20b8aec6532672b1
